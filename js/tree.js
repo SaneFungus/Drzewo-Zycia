@@ -1,5 +1,8 @@
+// js/tree.js
 import * as d3 from 'https://cdn.skypack.dev/d3@7';
-import tippy from 'https://unpkg.com/tippy.js@6/dist/tippy.esm.min.js';
+import tippy from 'https://cdn.jsdelivr.net/npm/tippy.js@6/dist/tippy.esm.js';
+
+console.log('tree.js działa');
 
 /**
  * Inicjalizuje drzewo życia w kontenerze.
