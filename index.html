@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generator Promptów Kabalistycznej Maszyny Epistemicznej</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>ARCANUM ARBORIS</h1>
+        <h2>סוֹד הָעֵץ - Sod ha-Etz – Tajemnica Drzewa</h2>
+        <p>
+          Wybierz sefiry z Drzewa Życia i wprowadź temat do analizy, aby
+          wygenerować zaawansowany prompt epistemiczny.
+        </p>
+      </header>
+
+      <main>
+        <div class="app-container">
+          <div class="tree-container">
+            <h2>Drzewo Życia</h2>
+            <div class="tree-of-life">
+              <!-- Sefirot będą tutaj umieszczone przez JS -->
+            </div>
+            <div class="sefirot-legend">
+              <h3>Wybrane sefiry:</h3>
+              <ul id="selected-sefirot-list"></ul>
+            </div>
+          </div>
+
+          <div class="prompt-container">
+            <div class="form-group">
+              <label for="topic-input">Temat do analizy:</label>
+              <input
+                type="text"
+                id="topic-input"
+                placeholder="Np. sztuczna inteligencja, rozwój osobisty, kreatywność..."
+              />
+            </div>
+
+            <div class="advanced-options">
+              <details>
+                <summary>Zaawansowane opcje analizy</summary>
+                <div class="options-grid">
+                  <div class="option-group">
+                    <label for="analysis-mode">Tryb analizy:</label>
+                    <select id="analysis-mode">
+                      <option value="static">
+                        Statyczny - tradycyjne perspektywy sefirotyczne
+                      </option>
+                      <option value="dynamic">
+                        Dynamiczny - uwzględnia transformacje i procesy
+                      </option>
+                      <option value="liminal">
+                        Liminalny - eksploruje granice poznania
+                      </option>
+                    </select>
+                  </div>
+
+                  <div class="option-group">
+                    <label for="question-count">Liczba pytań na sefirę:</label>
+                    <input
+                      type="range"
+                      id="question-count"
+                      min="1"
+                      max="5"
+                      value="3"
+                    />
+                    <span id="question-count-display">3</span>
+                  </div>
+
+                  <div class="option-group checkboxes">
+                    <div class="checkbox-item">
+                      <input type="checkbox" id="metacognitive-layer" checked />
+                      <label for="metacognitive-layer"
+                        >Warstwa meta-poznawcza</label
+                      >
+                      <span
+                        class="tooltip"
+                        title="Dodaje refleksję nad granicami interpretacji i świadomością poznawczą"
+                        >ℹ️</span
+                      >
+                    </div>
+
+                    <div class="checkbox-item">
+                      <input type="checkbox" id="mutual-illumination" checked />
+                      <label for="mutual-illumination"
+                        >Hermeneutyka wzajemnego oświetlania</label
+                      >
+                      <span
+                        class="tooltip"
+                        title="Eksploruje, jak analizowany temat może rzucać nowe światło na same kategorie kabalistyczne"
+                        >ℹ️</span
+                      >
+                    </div>
+
+                    <div class="checkbox-item">
+                      <input type="checkbox" id="include-paradoxes" checked />
+                      <label for="include-paradoxes"
+                        >Paradoksy i napięcia dialektyczne</label
+                      >
+                      <span
+                        class="tooltip"
+                        title="Bada produktywne napięcia między przeciwstawnymi sefirami w kontekście analizowanego tematu"
+                        >ℹ️</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </div>
+
+            <div class="generate-section">
+              <button id="generate-btn" class="primary-btn">
+                Generuj Prompt
+              </button>
+            </div>
+
+            <div class="output-container">
+              <h3>Wygenerowany Prompt:</h3>
+              <div class="controls">
+                <button id="copy-btn" title="Kopiuj do schowka">
+                  📋 Kopiuj
+                </button>
+                <button id="download-btn" title="Pobierz jako plik tekstowy">
+                  💾 Pobierz
+                </button>
+              </div>
+              <div id="prompt-output"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="footer-content">
+          <p>Generator Promptów Kabalistycznej Maszyny Epistemicznej © 2025</p>
+          <button id="help-btn" class="secondary-btn">Przewodnik</button>
+        </div>
+
+        <!-- Modal okno pomocy -->
+        <div id="help-modal" class="modal">
+          <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Przewodnik po Kabalistycznej Maszynie Epistemicznej</h2>
+            <div class="help-content">
+              <h3>Tryby analizy</h3>
+              <ul>
+                <li>
+                  <strong>Statyczny</strong> - Tradycyjna analiza przez pryzmat
+                  cech poszczególnych sefir
+                </li>
+                <li>
+                  <strong>Dynamiczny</strong> - Uwzględnia procesy transformacji
+                  i ewolucji analizowanego zagadnienia
+                </li>
+                <li>
+                  <strong>Liminalny</strong> - Eksploruje granice poznania,
+                  nieprzejrzystość i paradoksy
+                </li>
+              </ul>
+
+              <h3>Opcje dodatkowe</h3>
+              <ul>
+                <li>
+                  <strong>Warstwa meta-poznawcza</strong> - Refleksja nad samym
+                  procesem poznania i jego ograniczeniami
+                </li>
+                <li>
+                  <strong>Hermeneutyka wzajemnego oświetlania</strong> - Jak
+                  analizowane zagadnienie może zmieniać nasze rozumienie
+                  kategorii kabalistycznych
+                </li>
+                <li>
+                  <strong>Paradoksy i napięcia dialektyczne</strong> - Analiza
+                  produktywnych napięć między przeciwstawnymi sefirami
+                </li>
+              </ul>
+
+              <h3>Wskazówki</h3>
+              <p>
+                Dla złożonych zagadnień filozoficznych zalecamy tryb liminalny z
+                włączonymi wszystkimi opcjami dodatkowymi. Dla konkretnych
+                problemów praktycznych lepiej sprawdzi się tryb dynamiczny z
+                mniejszą liczbą pytań.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Użycie modułów ES6 -->
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
