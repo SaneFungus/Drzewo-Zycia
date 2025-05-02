@@ -1,5 +1,5 @@
 import * as d3 from 'https://cdn.skypack.dev/d3@7';
-import tippy from 'https://unpkg.com/tippy.js@6';
+import tippy from 'https://unpkg.com/tippy.js@6/dist/tippy.esm.min.js';
 
 /**
  * Inicjalizuje drzewo życia w kontenerze.
