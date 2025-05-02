@@ -1,6 +1,5 @@
 // js/tree.js
 import * as d3 from 'https://cdn.skypack.dev/d3@7';
-import tippy from 'https://cdn.jsdelivr.net/npm/tippy.js@6/dist/tippy.esm.js';
 
 console.log('tree.js działa');
 
@@ -35,10 +34,10 @@ export function initTree(data, containerId, checkboxContainerId) {
   root.descendants().forEach(node => {
     // checkbox
     const label = document.createElement('label');
-    label.innerHTML = `<input type=\"checkbox\" value=\"${node.data.name}\"/> ${node.data.name}`;
+    label.innerHTML = `<input type="checkbox" value="${node.data.name}" /> ${node.data.name}`;
     cbContainer.appendChild(label);
 
-    // circle
+    // węzeł (circle)
     g.append('circle')
       .attr('cx', node.y)
       .attr('cy', node.x)
@@ -51,6 +50,6 @@ export function initTree(data, containerId, checkboxContainerId) {
       });
   });
 
-  // Tooltipy
+  // Tooltipy (korzysta z globalnego `tippy`)
   tippy('[data-tippy-content]');
 }
