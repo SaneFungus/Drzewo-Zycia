@@ -1,0 +1,696 @@
+:root {
+  /* Kolory sefir - bardziej wyraziste, z zachowaniem symboliki alchemicznej */
+  --keter-color: #f0e6b2; /* Złoty, ale jaśniejszy */
+  --chokmah-color: #d6d6e2; /* Jasny srebrzysty */
+  --binah-color: #4c3828; /* Brąz - jaśniejszy dla czytelności */
+  --chesed-color: #3c5aa6; /* Niebieski - bardziej nasycony */
+  --gevurah-color: #b9302a; /* Czerwień - jaśniejsza */
+  --tiferet-color: #9a57bd; /* Purpura - jaśniejsza */
+  --netzach-color: #498c5a; /* Zieleń - jaśniejsza */
+  --hod-color: #d17f30; /* Pomarańcz - bardziej nasycony */
+  --yesod-color: #764baa; /* Fiolet - jaśniejszy */
+  --malkuth-color: #654321; /* Brąz ziemisty - jaśniejszy */
+
+  /* Paleta interfejsu - bardziej naukowa z subtelnymi alchemicznymi akcentami */
+  --bg-primary: #1a1a2e; /* Ciemne tło, bardziej neutralne */
+  --bg-secondary: #212140; /* Nieco jaśniejszy odcień */
+  --parchment-color: #f8f5eb; /* Jasny pergamin */
+  --text-light: #e6e6f0; /* Jasny tekst - bardziej neutralny */
+  --text-dark: #232136; /* Ciemny tekst */
+  --gold-accent: #c8aa6e; /* Złoty akcent - stonowany */
+  --silver-accent: #c0c0cc; /* Srebrny akcent - stonowany */
+  --active-border: #a88050; /* Złoty brzeg - stonowany */
+  --button-primary: #374779; /* Głęboki niebieski - bardziej naukowy */
+  --button-hover: #4d63a5; /* Jaśniejszy niebieski */
+  --path-inactive: rgba(100, 100, 100, 0.3); /* Ścieżka nieaktywna */
+  --path-active: rgba(192, 160, 90, 0.7); /* Ścieżka aktywna - złocista */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Libre Baskerville", Georgia, serif;
+  background-color: var(--bg-primary);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 1px;
+  background: var(--gold-accent);
+  margin: 15px auto;
+}
+
+header h1 {
+  color: var(--gold-accent);
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+header p {
+  color: var(--text-light);
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.app-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.tree-container,
+.prompt-container {
+  flex: 1;
+  min-width: 300px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  position: relative;
+}
+
+.tree-container h2,
+.prompt-container h3 {
+  margin-bottom: 20px;
+  color: var(--gold-accent);
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+/* Tree of Life Visualization - czysty, jednolity styl */
+.tree-of-life {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sefira {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 2;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  font-family: "Libre Baskerville", serif;
+}
+
+/* Poprawiona czytelność tekstu na sefirach */
+.sefira span {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Specjalne reguły dla jaśniejszych sefir */
+#sefira-keter span,
+#sefira-chokmah span {
+  color: rgba(0, 0, 0, 0.85);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.sefira:hover {
+  transform: scale(1.08);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+}
+
+.sefira.selected {
+  border: 2px solid var(--active-border);
+  box-shadow: 0 0 15px rgba(200, 170, 110, 0.4);
+}
+
+.path {
+  position: absolute;
+  background-color: var(--path-inactive);
+  transform-origin: 0 0;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: 1px;
+  height: 2px;
+}
+
+.path.active {
+  background-color: var(--path-active);
+  height: 3px;
+}
+
+.sefirot-legend {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgba(30, 30, 50, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sefirot-legend h3 {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: var(--gold-accent);
+  text-align: left;
+}
+
+#selected-sefirot-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sefirah-tag {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Poprawiona czytelność tekstu w tagach */
+.sefirah-tag {
+  color: white;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.sefirah-tag .remove {
+  cursor: pointer;
+  font-weight: bold;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.sefirah-tag .remove:hover {
+  opacity: 1;
+}
+
+/* Form Styling - bardziej precyzyjny, techniczny */
+.form-group {
+  margin-bottom: 20px;
+  background: rgba(30, 30, 50, 0.5);
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: normal;
+  color: var(--silver-accent);
+  font-size: 1.05rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  background-color: rgba(248, 245, 235, 0.95);
+  color: var(--text-dark);
+  font-family: "Libre Baskerville", serif;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--gold-accent);
+  box-shadow: 0 0 6px rgba(200, 170, 110, 0.3);
+}
+
+.form-group button {
+  background: var(--button-primary);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: "Libre Baskerville", serif;
+}
+
+.form-group button:hover {
+  background: var(--button-hover);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Output Styling - czysty, pergaminowy styl */
+.output-container {
+  background-color: rgba(30, 30, 50, 0.5);
+  border-radius: 6px;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.controls button {
+  background-color: var(--button-primary);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.controls button:hover {
+  background-color: var(--button-hover);
+}
+
+#prompt-output {
+  background-color: var(--parchment-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 20px;
+  min-height: 300px;
+  max-height: 500px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  font-family: "Libre Baskerville", serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: rgba(230, 230, 240, 0.5);
+  font-size: 0.9rem;
+  padding-bottom: 20px;
+}
+
+footer::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 1px;
+  background: var(--silver-accent);
+  margin: 0 auto 15px;
+  opacity: 0.3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .tree-of-life {
+    height: 450px;
+  }
+
+  .sefira {
+    width: 50px;
+    height: 50px;
+    font-size: 0.8rem;
+  }
+}
+
+/* ======= Nowe Style dla Zaawansowanych Opcji ======= */
+
+/* Zaawansowane opcje - styl ogólny */
+.advanced-options {
+  margin: 20px 0;
+  background: rgba(30, 30, 50, 0.5);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+/* Styl dla elementu details */
+.advanced-options details {
+  width: 100%;
+}
+
+/* Styl dla summary (nagłówka rozwijanego panelu) */
+.advanced-options summary {
+  padding: 15px 20px;
+  cursor: pointer;
+  font-weight: normal;
+  color: var(--gold-accent);
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s ease;
+  user-select: none;
+  outline: none;
+  background: rgba(20, 20, 40, 0.4);
+}
+
+.advanced-options summary:hover {
+  background-color: rgba(40, 40, 70, 0.5);
+}
+
+.advanced-options summary::-webkit-details-marker {
+  color: var(--gold-accent);
+}
+
+/* Kontener opcji - grid */
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Grupy opcji */
+.option-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.option-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: normal;
+  color: var(--silver-accent);
+  font-size: 0.95rem;
+}
+
+/* Select dla trybu analizy */
+.option-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  background-color: rgba(30, 30, 50, 0.7);
+  color: var(--text-light);
+  font-family: "Libre Baskerville", serif;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23c8aa6e%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  padding-right: 30px;
+}
+
+.option-group select:focus {
+  outline: none;
+  border-color: var(--gold-accent);
+  box-shadow: 0 0 6px rgba(200, 170, 110, 0.3);
+}
+
+/* Suwak liczby pytań */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  background: rgba(60, 60, 80, 0.5);
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--gold-accent);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--gold-accent);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#question-count-display {
+  display: inline-block;
+  width: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: var(--gold-accent);
+  font-size: 1.1rem;
+  margin-left: 10px;
+}
+
+/* Checkboxy */
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-item input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  background: rgba(30, 30, 50, 0.7);
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox-item input[type="checkbox"]:checked {
+  background: var(--gold-accent);
+  border-color: var(--gold-accent);
+}
+
+.checkbox-item input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  color: var(--bg-primary);
+  font-size: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
+.checkbox-item label {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  user-select: none;
+}
+
+/* Tooltips */
+.tooltip {
+  cursor: help;
+  color: var(--silver-accent);
+  position: relative;
+  font-size: 0.9rem;
+}
+
+.tooltip:hover::before {
+  content: attr(title);
+  position: absolute;
+  background: rgba(20, 20, 40, 0.95);
+  color: var(--text-light);
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  width: 220px;
+  top: -5px;
+  left: 100%;
+  margin-left: 10px;
+  pointer-events: none;
+  z-index: 100;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(200, 170, 110, 0.2);
+  font-style: normal;
+}
+
+/* Sekcja z przyciskiem generowania */
+.generate-section {
+  padding: 0 20px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Przyciski - style zmodyfikowane */
+.primary-btn {
+  background: var(--button-primary);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: "Libre Baskerville", serif;
+  letter-spacing: 0.5px;
+}
+
+.primary-btn:hover {
+  background: var(--button-hover);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  transform: translateY(-1px);
+}
+
+.secondary-btn {
+  background: transparent;
+  color: var(--silver-accent);
+  border: 1px solid rgba(192, 192, 204, 0.3);
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  font-family: "Libre Baskerville", serif;
+}
+
+.secondary-btn:hover {
+  background: rgba(192, 192, 204, 0.1);
+  border-color: var(--silver-accent);
+}
+
+/* Modal - okno pomocy */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 20, 0.8);
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: var(--bg-secondary);
+  margin: 5% auto;
+  padding: 30px;
+  border: 1px solid var(--gold-accent);
+  border-radius: 8px;
+  max-width: 800px;
+  position: relative;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: var(--silver-accent);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-modal:hover {
+  color: var(--gold-accent);
+}
+
+.help-content {
+  margin-top: 20px;
+  line-height: 1.7;
+}
+
+.help-content h3 {
+  color: var(--gold-accent);
+  margin: 20px 0 10px;
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+
+.help-content ul {
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
+
+.help-content li {
+  margin-bottom: 8px;
+}
+
+.help-content p {
+  margin-bottom: 15px;
+}
+
+/* Footer z przyciskiem pomocy */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Responsywne dostosowania */
+@media (max-width: 768px) {
+  .options-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .modal-content {
+    margin: 10% 15px;
+    padding: 20px;
+  }
+
+  .tooltip:hover::before {
+    width: 180px;
+    left: 50%;
+    top: -70px;
+    transform: translateX(-50%);
+    margin-left: 0;
+  }
+}
