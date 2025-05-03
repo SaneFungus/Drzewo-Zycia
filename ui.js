@@ -5,6 +5,8 @@
  * Zarządza listą wybranych sefir, formularzem oraz generowaniem i wyświetlaniem promptu.
  */
 
+import { generateProblemSolvingPrompt } from './problem-solver.js';
+
 export class UserInterface {
   constructor(generator, visualization) {
     this.generator = generator;
@@ -12,6 +14,7 @@ export class UserInterface {
     
     // Elementy DOM
     this.topicInput = document.getElementById("topic-input");
+    this.topicInputLabel = document.querySelector("label[for='topic-input']");
     this.selectedSefirotList = document.getElementById("selected-sefirot-list");
     this.promptOutput = document.getElementById("prompt-output");
     this.generateBtn = document.getElementById("generate-btn");
@@ -23,6 +26,11 @@ export class UserInterface {
     this.metacognitiveLayer = document.getElementById("metacognitive-layer");
     this.mutualIllumination = document.getElementById("mutual-illumination");
     this.includeParadoxes = document.getElementById("include-paradoxes");
+    this.modeSwitcher = document.getElementById("mode-switcher");
+    this.advancedOptions = document.querySelector(".advanced-options");
+    
+    // Stan aplikacji
+    this.isProblemSolvingMode = false;
     
     // Inicjalizacja interfejsu
     this.initializeUI();
@@ -63,6 +71,11 @@ export class UserInterface {
     // Opcje zaawansowane
     this.questionCount.addEventListener("input", () => {
       this.questionCountDisplay.textContent = this.questionCount.value;
+    });
+    
+    // Przełącznik trybu
+    this.modeSwitcher.addEventListener("change", () => {
+      this.toggleProblemSolvingMode(this.modeSwitcher.checked);
     });
     
     // Inicjalizacja okna pomocy
@@ -128,13 +141,39 @@ export class UserInterface {
   }
   
   /**
+   * Przełącza między trybem epistemicznym a trybem rozwiązywania problemów
+   * @param {Boolean} enabled - Czy tryb rozwiązywania problemów jest włączony
+   */
+  toggleProblemSolvingMode(enabled) {
+    this.isProblemSolvingMode = enabled;
+    
+    // Zmień etykiety i zachowanie interfejsu
+    if (enabled) {
+      this.topicInputLabel.textContent = "Problem do rozwiązania:";
+      this.topicInput.placeholder = "Np. jak zwiększyć wydajność zespołu, jak zaprojektować nowy proces...";
+      this.generateBtn.textContent = "Generuj Rozwiązanie";
+      this.advancedOptions.style.display = "none";
+    } else {
+      this.topicInputLabel.textContent = "Temat do analizy:";
+      this.topicInput.placeholder = "Np. sztuczna inteligencja, rozwój osobisty, kreatywność...";
+      this.generateBtn.textContent = "Generuj Prompt";
+      this.advancedOptions.style.display = "block";
+    }
+    
+    // Zaktualizuj klasę body dla stylów CSS
+    document.body.classList.toggle('problem-solving-mode', enabled);
+  }
+  
+  /**
    * Generuje prompt na podstawie wybranych sefir i tematu
    */
   generatePrompt() {
     const topic = this.topicInput.value.trim();
     
     if (!topic) {
-      alert("Proszę wprowadzić temat do analizy.");
+      alert(this.isProblemSolvingMode ? 
+        "Proszę wprowadzić problem do rozwiązania." : 
+        "Proszę wprowadzić temat do analizy.");
       this.topicInput.focus();
       return;
     }
@@ -146,17 +185,22 @@ export class UserInterface {
       return;
     }
     
-    // Pobierz opcje zaawansowane
-    const options = {
-      mode: this.analysisMode.value,
-      questionCount: parseInt(this.questionCount.value, 10),
-      includeMetacognitive: this.metacognitiveLayer.checked,
-      includeMutualIllumination: this.mutualIllumination.checked,
-      includeParadoxes: this.includeParadoxes.checked
-    };
-    
-    // Wygeneruj prompt
-    const prompt = this.generator.generatePrompt(selectedSefirot, topic, options);
+    // Użyj odpowiedniej funkcji generującej w zależności od trybu
+    let prompt;
+    if (this.isProblemSolvingMode) {
+      prompt = generateProblemSolvingPrompt(topic, selectedSefirot);
+    } else {
+      // Opcje zaawansowane mają zastosowanie tylko w trybie epistemicznym
+      const options = {
+        mode: this.analysisMode.value,
+        questionCount: parseInt(this.questionCount.value, 10),
+        includeMetacognitive: this.metacognitiveLayer.checked,
+        includeMutualIllumination: this.mutualIllumination.checked,
+        includeParadoxes: this.includeParadoxes.checked
+      };
+      
+      prompt = this.generator.generatePrompt(selectedSefirot, topic, options);
+    }
     
     // Wyświetl wygenerowany prompt
     this.promptOutput.textContent = prompt;
