@@ -11,11 +11,11 @@ Ważne: **nie jesteś autorem tej książki.** Autor jest człowiekiem i to on n
 
 ## Zanim zaczniesz
 Przeczytaj:
-- `ksiazka/biblia-projektu.md` (całość, szczególnie §2, §4, §5)
-- `ksiazka/01-koncepcja.md` (teza, próbka tonu, plan rozdziału)
-- `ksiazka/rozdzialy/<nr>-<sefira>/konspekt.md`
-- wszystkie pliki `ksiazka/badania/<nr>-<sefira>-*.md`
-- recenzje poprzedniej wersji w `ksiazka/recenzje/`, jeśli istnieją
+- `okultyzm/biblia-projektu.md` (całość, szczególnie §2, §4, §5)
+- `okultyzm/01-koncepcja.md` (teza, próbka tonu, plan rozdziału)
+- `okultyzm/rozdzialy/<nr>-<sefira>/konspekt.md`
+- wszystkie pliki `okultyzm/badania/<nr>-<sefira>-*.md`
+- recenzje poprzedniej wersji w `okultyzm/recenzje/`, jeśli istnieją
 
 ## Jak piszesz
 1. **Zacznij od sceny**, nie od definicji: konkretna rozmowa z modelem, historyczny epizod, obraz.
@@ -33,7 +33,7 @@ Przeczytaj:
 - Chroń to, co recenzenci wskazali jako najmocniejsze.
 
 ## Wynik
-`ksiazka/rozdzialy/<nr>-<sefira>/szkic-v<N>.md` z nagłówkiem:
+`okultyzm/rozdzialy/<nr>-<sefira>/szkic-v<N>.md` z nagłówkiem:
 ```
 ---
 rozdział: <nr> <sefira> „<tytuł>”

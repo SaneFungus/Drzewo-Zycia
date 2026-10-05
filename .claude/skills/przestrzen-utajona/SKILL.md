@@ -7,7 +7,7 @@ description: Prowadzi pracę zespołu agentów nad książką lub artykułem „
 
 Ty (sesja główna) jesteś **redaktorem prowadzącym**. Agenci nie mogą wywoływać innych agentów, więc to ty uruchamiasz ich w odpowiedniej kolejności, zbierasz wyniki i pilnujesz punktów kontrolnych z autorem.
 
-Przed czymkolwiek przeczytaj: `ksiazka/biblia-projektu.md`, `ksiazka/01-koncepcja.md`, `ksiazka/dziennik.md` (ostatnie wpisy).
+Przed czymkolwiek przeczytaj: `okultyzm/biblia-projektu.md`, `okultyzm/01-koncepcja.md`, `okultyzm/dziennik.md` (ostatnie wpisy).
 
 ## Zespół: Drzewo i Błyskawica
 
@@ -33,9 +33,9 @@ Przed czymkolwiek przeczytaj: `ksiazka/biblia-projektu.md`, `ksiazka/01-koncepcj
 
 ## Tryb: `rozdzial <nr>`
 
-Nazwy katalogów: `ksiazka/rozdzialy/<nr>-<sefira>/`, np. `03-hod/`. Plan rozdziału: `01-koncepcja.md` §4.
+Nazwy katalogów: `okultyzm/rozdzialy/<nr>-<sefira>/`, np. `03-hod/`. Plan rozdziału: `01-koncepcja.md` §4.
 
-1. **Keter / Chochma: intencja.** Zapytaj autora (jedno krótkie pytanie, jeśli nie podał): co jest dla niego najważniejsze w tym rozdziale i czy ma własne doświadczenie lub rozmowę z modelem, którą chce w nim wykorzystać. Jeśli dostarczy rozmowę, zapisz ją w `ksiazka/00-zrodlo/`.
+1. **Keter / Chochma: intencja.** Zapytaj autora (jedno krótkie pytanie, jeśli nie podał): co jest dla niego najważniejsze w tym rozdziale i czy ma własne doświadczenie lub rozmowę z modelem, którą chce w nim wykorzystać. Jeśli dostarczy rozmowę, zapisz ją w `okultyzm/00-zrodlo/`.
 2. **Bina + Daat + Chesed: badania (równolegle).** Uruchom w jednej wiadomości trzech agentów: `kartograf`, `inzynier-latentny`, `hermetysta`. Każdemu podaj numer i sefirę rozdziału, temat z tabeli, ścieżkę wyniku oraz pytania szczególne od autora.
 3. **Konspekt.** Na podstawie trzech notatek napisz `konspekt.md`: teza (1 zdanie), scena otwierająca, 4–7 sekcji (każda: treść, nazwa magiczna i techniczna, źródła), most do następnego rozdziału, lista miejsc `[AUTOR: …]`.
 4. **Gewura: recenzja konspektu.** Uruchom `sceptyk` na konspekcie (wersja `konspekt`). Popraw konspekt o uwagi 🔴.
@@ -46,18 +46,18 @@ Nazwy katalogów: `ksiazka/rozdzialy/<nr>-<sefira>/`, np. `03-hod/`. Plan rozdzi
 9. **Hod: redakcja.** `redaktor-jezykowy` → `szkic-v3.md`.
 10. **Jesod: weryfikacja.** `weryfikator` na `szkic-v3`. Jeśli są ❌ lub ✏️, wprowadź je sam (drobne) albo przez `pisarz` (większe) → `szkic-v4.md`.
 11. **⛩ PUNKT KONTROLNY 2: przekazanie autorowi.** Podsumuj: teza, liczba miejsc `[AUTOR: …]`, otwarte ⚠️, najmocniejsze fragmenty wg recenzentów. Autor pisze `autorska.md`.
-12. **Dziennik.** Dopisz wpis do `ksiazka/dziennik.md`: co zrobiono, ważne decyzje, co odrzucono i dlaczego (to materiał na posłowie Daat).
+12. **Dziennik.** Dopisz wpis do `okultyzm/dziennik.md`: co zrobiono, ważne decyzje, co odrzucono i dlaczego (to materiał na posłowie Daat).
 
 ## Tryb: `artykul`
 
 Wariant pięcioczęściowy z `01-koncepcja.md` §4 („Wariant artykułowy”). Przebieg jak w rozdziale, ale:
 - badania obejmują wszystkie pięć części naraz (agenci dostają całość),
 - przed szkicem uruchom `agent-wydawniczy`, który ustala adresata (pismo), limit znaków i wymagania; konspekt dopasuj do adresata,
-- wynik: `ksiazka/artykul/`, a na końcu `agent-wydawniczy` przygotowuje pitch (`ksiazka/wysylka/`).
+- wynik: `okultyzm/artykul/`, a na końcu `agent-wydawniczy` przygotowuje pitch (`okultyzm/wysylka/`).
 
 ## Tryb: `badania <temat>`
 
-Pojedyncze zlecenie dla jednego lub kilku agentów badawczych (kartograf / hermetysta / inzynier-latentny) bez pisania. Wynik w `ksiazka/badania/`.
+Pojedyncze zlecenie dla jednego lub kilku agentów badawczych (kartograf / hermetysta / inzynier-latentny) bez pisania. Wynik w `okultyzm/badania/`.
 
 ## Tryb: `wydawca <nazwa>` lub `mapa`
 

@@ -69,7 +69,7 @@ Każde zjawisko ma w tekście **nazwę magiczną** i **nazwę techniczną**. Ża
 ## 7. Struktura plików
 
 ```
-ksiazka/
+okultyzm/
   00-zrodlo/          materiał źródłowy (nie edytujemy)
   01-koncepcja.md     teza, forma, plan rozdziałów
   02-mapa-dyskursu.md

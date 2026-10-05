@@ -46,7 +46,7 @@ W katalogu repozytorium:
 /przestrzen-utajona artykul           # wersja artykułowa (rekomendowany pierwszy krok)
 /przestrzen-utajona badania egregor   # sam research
 /przestrzen-utajona wydawca okultura  # rozpoznanie wydawcy i materiały
-/przestrzen-utajona weryfikuj ksiazka/02-mapa-dyskursu.md
+/przestrzen-utajona weryfikuj okultyzm/02-mapa-dyskursu.md
 ```
 
 Agentów można też wywołać pojedynczo, np.: *„Użyj agenta hermetysta, żeby zbadał rodowód pojęcia egregor”*.

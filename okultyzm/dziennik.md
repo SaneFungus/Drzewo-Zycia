@@ -4,6 +4,10 @@ Zapis decyzji i zdarzeń w procesie pisania. Materiał na posłowie **Daat**, cz
 
 ---
 
+## 2026-10-05: Przeniesienie materiałów
+
+- Na prośbę autora katalog `ksiazka/` przemianowano na `okultyzm/`. Definicje agentów i workflow zostają w `.claude/` (tylko tam Claude Code je wczytuje), a ścieżki w nich wskazują teraz `okultyzm/`.
+
 ## 2026-10-05: Dwa nowe źródła od autora
 
 - Dodano `00-zrodlo/zarys-krzemowy-egregor.md` (jeden tom, teza o sprawczej mocy języka) i `00-zrodlo/krzemowa-trylogia.md` (metafizyka, krytyka człowieka, praktyka).
