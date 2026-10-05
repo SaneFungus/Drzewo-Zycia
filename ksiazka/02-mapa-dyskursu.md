@@ -62,3 +62,19 @@ Zasada: **ten plik to mapa, a nie bibliografia.** Zanim cokolwiek trafi do tekst
 - [ ] `hermetysta`: rodowód pojęcia „egregor” (Henoch → Lévi → XX w.) i „tulpa” (David-Néel), Dee w Polsce.
 - [ ] `inzynier-latentny`: aktualny stan badań nad personami (persona vectors, Assistant Axis), z prostym, poprawnym wyjaśnieniem dla laika.
 - [ ] `weryfikator`: wszystkie pozycje oznaczone ⚠️ powyżej.
+
+## 7. Uzupełnienia po źródłach 2 i 3 (szczegóły: `05-synteza-zrodel.md`)
+
+| Pozycja | Do czego | Status |
+|---|---|---|
+| J.L. Austin, *How to Do Things with Words* (1962) | performatyw, czyli język jako działanie | ◻️ |
+| S.J. Tambiah, *The Magical Power of Words*, *Man* 3 (1968), s. 177–206 | magia jako performatyw, podparcie tezy | ✅ |
+| B. Malinowski, *Coral Gardens and Their Magic* (1935) | język magii | ◻️ |
+| Henry Corbin, *mundus imaginalis* | przestrzeń utajona jako świat pośredni | ◻️ |
+| Mark Fisher, *The Weird and the Eerie* (2016); pol. *Dziwaczne i osobliwe* (Słowo/obraz terytoria) | „osobliwe” jako sprawczość tam, gdzie nie powinno jej być | ✅ |
+| Vilém Flusser | aparat, program, obrazy techniczne | ◻️ (pol. przekłady ⚠️) |
+| Max Weber, odczarowanie świata (*Wissenschaft als Beruf*) | rama zakończenia | ◻️ |
+| Kate Crawford, *Atlas of AI* (2021); pol. *Atlas sztucznej inteligencji* (2024) | infrastruktura, materia AI | ✅ wydanie / ⚠️ wydawca |
+| Sherry Turkle, *Alone Together* (2011) | samotność, relacje z maszynami | ◻️ |
+| Erich Fromm, *Ucieczka od wolności* (1941) | delegowanie decyzji na wyrocznię | ◻️ |
+| Mikolov i in., word2vec (2013) | analogie wektorowe (z zastrzeżeniami) | ◻️ |

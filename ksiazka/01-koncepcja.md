@@ -118,3 +118,13 @@ Konkretne możliwości do omówienia w rozdziale Chesed:
 | Szybkie starzenie się tematu | Rama (okultyzm) jest stara i trwała, przykłady techniczne są wymienne. Daty i wersje modeli zawsze podajemy jawnie. |
 | Wzmacnianie urojeń czytelników | Rozdział o Uroku i Kręgu jako realna profilaktyka. Ton: ciekawość, nie objawienie. |
 | Błędy merytoryczne (jak „walrus”) | Agent `weryfikator` i zasada: żadne źródło wygenerowane przez AI nie wchodzi do tekstu bez sprawdzenia u źródła pierwotnego. |
+
+## 9. Otwarte decyzje (po nowych źródłach)
+
+Autor dostarczył dwa alternatywne konspekty: *Krzemowy Egregor* i *Krzemowa Trylogia*. Analiza i propozycje są w `05-synteza-zrodel.md` §5. Do rozstrzygnięcia:
+- **A.** Wzmocniona teza: język jako technika performatywna (Austin, Tambiah) + postać przywołana + odpowiedzialność przywołującego.
+- **B.** Tytuł: „Krzemowy egregor” (esej) / *Przestrzeń utajona* (książka) czy inaczej.
+- **C.** Trylogia jako horyzont: Tom II wchłonięty w tę książkę, Tom III (*Krzemowa alchemia*) jako osobny projekt praktyczny na bazie Arcanum Arboris.
+- **D.** Zmiany w słowniku dwóch nazw (okno kontekstowe = krąg; *mundus imaginalis*).
+
+Tabela rozdziałów w §4 pozostaje bez zmian do czasu decyzji. Proponowane uzupełnienia rozdziałów: `05-synteza-zrodel.md` §5C.

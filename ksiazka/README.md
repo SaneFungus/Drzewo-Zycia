@@ -11,6 +11,8 @@ Książka (albo najpierw obszerny artykuł) o okultystycznej lekturze sztucznej 
 | [`02-mapa-dyskursu.md`](02-mapa-dyskursu.md) | Gdzie książka staje w debacie o AI: 5 stanowisk, folklor AI, rodowód, polska linia, luka |
 | [`03-mapa-wydawnicza.md`](03-mapa-wydawnicza.md) | Okultura i alternatywy, pisma, rynek angielski, festiwale, granty, prawo, strategia |
 | [`04-propozycja-dla-okultury.md`](04-propozycja-dla-okultury.md) | Szkic listu i propozycji wydawniczej |
+| [`05-synteza-zrodel.md`](05-synteza-zrodel.md) | Porównanie trzech źródeł (rozmowa, *Krzemowy Egregor*, *Krzemowa Trylogia*), co przejąć, co odrzucić, decyzje do podjęcia |
+| [`00-zrodlo/zarys-krzemowy-egregor.md`](00-zrodlo/zarys-krzemowy-egregor.md), [`00-zrodlo/krzemowa-trylogia.md`](00-zrodlo/krzemowa-trylogia.md) | Dwa alternatywne konspekty dostarczone przez autora |
 | [`biblia-projektu.md`](biblia-projektu.md) | Wspólna pamięć zespołu: teza, głos, zasady rzetelności, słownik dwóch nazw |
 | [`dziennik.md`](dziennik.md) | Dziennik decyzji (materiał na posłowie) |
 

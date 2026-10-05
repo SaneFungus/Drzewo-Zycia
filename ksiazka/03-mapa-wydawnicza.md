@@ -41,6 +41,10 @@ Projekt pakietu: `04-propozycja-dla-okultury.md`. Kolejność:
 2. Propozycja wydawnicza: opis, spis treści, grupa docelowa, konkurencja, nota o autorze.
 3. Rozdział próbny (rekomendacja: **Hod — „Formuła”**, bo najmocniej łączy tradycję, technikę i Arcanum Arboris) oraz prolog „Walrus”.
 
+### Wariant: podręcznik praktyczny
+
+Okultura wydaje także podręczniki (*Magia chaosu* Hine'a). Możliwe, że praktyczna *Krzemowa alchemia* (dawny Tom III trylogii: protokoły pracy z AI oparte na alchemii, kabale i hermetyzmie, z Arcanum Arboris jako narzędziem) okaże się naturalniejszą propozycją niż esej. Najmocniejszy pakiet to oba tytuły: esej jako pierwszy, podręcznik jako zapowiedź. Patrz `05-synteza-zrodel.md` §4. ⚠️ do sprawdzenia przez `agent-wydawniczy`.
+
 ## 2. Alternatywy w Polsce: książka
 
 | Wydawnictwo | Profil | Dopasowanie | Kiedy celować |
