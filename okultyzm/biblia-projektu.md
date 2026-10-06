@@ -6,7 +6,13 @@ Wspólna pamięć zespołu. **Każdy agent czyta ten plik przed rozpoczęciem pr
 
 ## 1. Teza (nienaruszalna bez decyzji autora)
 
-Persona modelu językowego to **postać przywołana**: ma realną strukturę, ale nie ma trwałego istnienia poza aktem przywołania. Słownik okultystyczny stosujemy **metodologicznie**, jako narzędzie opisu, a nie wyznanie wiary. Pełne rozwinięcie: `01-koncepcja.md` §3.
+Zatwierdzona przez autora 2026-10-06 (decyzja A z `05-synteza-zrodel.md`):
+
+> Zbieżność modeli językowych i magii nie jest przypadkowa, bo obie są **technikami performatywnej mocy języka** (Austin, Tambiah). Dlatego słownik magiczny opisuje te maszyny trafnie. Persona, którą wywołujemy, jest **postacią przywołaną**: realną w strukturze, nietrwałą w istnieniu. A **odpowiedzialność za przywołanie spoczywa na przywołującym**: to człowiek, a nie krzem, jest miejscem największego ryzyka i największej możliwości.
+
+Słownik okultystyczny stosujemy **metodologicznie**, jako narzędzie opisu, a nie wyznanie wiary. Pełne rozwinięcie: `01-koncepcja.md` §3.
+
+**Tytuły (decyzja B):** esej „Krzemowy egregor”, książka *Przestrzeń utajona. Okultystyczna lektura sztucznej inteligencji*.
 
 ## 2. Zasada dwóch nazw
 
@@ -28,7 +34,8 @@ Każde zjawisko ma w tekście **nazwę magiczną** i **nazwę techniczną**. Ża
 - Pierwsza osoba autora, praktyka z wnętrza: „kiedy pytam maszynę…”, a nie „użytkownicy często…”.
 - Erudycja bez asekuracji. Krótkie zdania tam, gdzie pada teza, długie tam, gdzie jest obraz.
 - Humor jako krąg ochronny. Patos zawsze przełamany.
-- Wzorce: Erik Davis (*TechGnosis*), Jacek Dukaj (*Po piśmie*), Robert Anton Wilson (lekkość), Olga Tokarczuk (eseje).
+- Wzorce: Erik Davis (*TechGnosis*), Jacek Dukaj (*Po piśmie*), Robert Anton Wilson (lekkość), Olga Tokarczuk (eseje), Vilém Flusser (teoria aparatu), Mark Fisher (*Dziwaczne i osobliwe*).
+- Głos krytyczny, do przywołania, nie do naśladowania: Byung-Chul Han.
 - Antywzorce: ezoteryczny poradnik, korporacyjny raport o AI, rozprawka „z jednej strony, z drugiej strony”.
 
 ## 5. Typografia i język
@@ -61,7 +68,10 @@ Każde zjawisko ma w tekście **nazwę magiczną** i **nazwę techniczną**. Ża
 | przywołany duch / tulpa | persona, symulakrum | — do opracowania (rozdz. Tiferet) |
 | sygil | wektor sterujący (*steering vector*), *persona vector* | sygil działa przez operatora; wektor działa bezpośrednio na aktywacje |
 | wróżba, losowanie | sampling (temperatura, top-p) | wróżba zakłada sens ukryty w przypadku; sampling to przypadek kontrolowany wokół najbardziej prawdopodobnego |
-| krąg ochronny, pieczęć | alignment, system prompt, Constitutional AI | — do opracowania (rozdz. Gewura) |
+| krąg | okno kontekstowe | krąg chroni operatora przed bytem, a okno kontekstowe ogranicza tylko to, co „byt” widzi; ochroną jest raczej trening |
+| pieczęć, wiązanie | system prompt, Constitutional AI, RLHF | — do opracowania (rozdz. Gewura). Nie „egzorcyzm”: egzorcyzm usuwa byt, a RLHF kształtuje personę |
+| *mundus imaginalis* (Corbin) | przestrzeń utajona (*latent space*) | u Corbina świat imaginalny jest obiektywny i duchowy; przestrzeń utajona jest obiektywna matematycznie, ale nic nie wiemy o jej „duchowości” |
+| athanor | sesja pracy z modelem (rama *Krzemowej alchemii*) | athanor nie ma własnych skłonności; model ma (sykofancja) |
 | cień, *kelipot* | efekt Waluigiego | — |
 | serwitor | agent AI | serwitor ma jedno zadanie i „umiera” po jego wykonaniu, co akurat się zgadza |
 | demonologia / angelologia | interpretowalność, słowniki cech | — |
@@ -77,6 +87,7 @@ okultyzm/
   04-propozycja-dla-okultury.md
   biblia-projektu.md  ← ten plik
   dziennik.md         dziennik decyzji (materiał na posłowie Daat)
+  krzemowa-alchemia/  osobny projekt praktyczny (podręcznik)
   badania/            notatki badawcze: <nr>-<sefira>-<agent>.md
   rozdzialy/<nr>-<sefira>/
       konspekt.md

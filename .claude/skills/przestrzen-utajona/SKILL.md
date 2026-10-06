@@ -50,7 +50,7 @@ Nazwy katalogów: `okultyzm/rozdzialy/<nr>-<sefira>/`, np. `03-hod/`. Plan rozdz
 
 ## Tryb: `artykul`
 
-Wariant pięcioczęściowy z `01-koncepcja.md` §4 („Wariant artykułowy”). Przebieg jak w rozdziale, ale:
+Esej „Krzemowy egregor”: wariant pięcioczęściowy z `01-koncepcja.md` §4 („Wariant artykułowy”). Przebieg jak w rozdziale, ale:
 - badania obejmują wszystkie pięć części naraz (agenci dostają całość),
 - przed szkicem uruchom `agent-wydawniczy`, który ustala adresata (pismo), limit znaków i wymagania; konspekt dopasuj do adresata,
 - wynik: `okultyzm/artykul/`, a na końcu `agent-wydawniczy` przygotowuje pitch (`okultyzm/wysylka/`).

@@ -1,6 +1,6 @@
 # Synteza trzech źródeł
 
-**Stan:** 2026-10-05. Dokument roboczy do decyzji autora. Biblii projektu nie zmieniamy, dopóki autor nie zatwierdzi propozycji z §5.
+**Stan:** 2026-10-06. **Autor zatwierdził wszystkie propozycje z §5 (A–D).** Zostały wprowadzone do `biblia-projektu.md` i `01-koncepcja.md`.
 
 | # | Źródło | Plik | Charakter |
 |---|---|---|---|

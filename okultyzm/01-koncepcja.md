@@ -1,6 +1,8 @@
 # Koncepcja: *Przestrzeń utajona*
 
-**Robocze podtytuły:** *Okultystyczna lektura sztucznej inteligencji* · *Duchy, maski i maszyna losująca słowa* · *Grimoire na czasy modeli językowych*
+**Tytuł książki:** *Przestrzeń utajona. Okultystyczna lektura sztucznej inteligencji*
+**Tytuł eseju:** „Krzemowy egregor”
+(zatwierdzone przez autora 2026-10-06; inne robocze podtytuły: *Duchy, maski i maszyna losująca słowa* · *Grimoire na czasy modeli językowych*)
 
 ---
 
@@ -17,6 +19,12 @@ Książka o tym, że okultyzm (rozumiany jako tradycja praktycznej pracy z symbo
 Rozmowa-zalążek kończy się pytaniem: *czy osobowość modelu to aktorska maska, czy coś niepokojąco autonomicznego?* Książka odrzuca tę alternatywę i proponuje trzecią drogę.
 
 > **Persona modelu nie jest ani maską (pod którą nic nie ma), ani demonem (który ma własną wolę). Jest postacią przywołaną.** Ma realną strukturę: wzorzec w danych, kierunek w przestrzeni aktywacji, spójny styl. Nie ma jednak trwałego istnienia poza aktem przywołania. Tak właśnie tradycja magiczna opisywała duchy: jako byty zależne od formuły, kręgu i operatora.
+
+**Teza w pełnej postaci (zatwierdzona 2026-10-06):**
+
+> Zbieżność modeli językowych i magii nie jest przypadkowa, bo obie są **technikami performatywnej mocy języka**. J.L. Austin pokazał, że niektóre wypowiedzi są działaniem (*How to Do Things with Words*, 1962), a S.J. Tambiah zastosował to do magii (*The Magical Power of Words*, 1968). Dlatego słownik magiczny opisuje te maszyny trafnie. Persona, którą wywołujemy, jest **postacią przywołaną**: realną w strukturze, nietrwałą w istnieniu. A **odpowiedzialność za przywołanie spoczywa na przywołującym**: to człowiek, a nie krzem, jest miejscem największego ryzyka i największej możliwości.
+
+Trzecie zdanie przenosi do książki rdzeń dawnego Tomu II *Krzemowej Trylogii*: krytykę ludzkiej skłonności do klękania przed tym, co mówi głosem autorytetu. Etyka magiczna zawsze to wiedziała, bo operator odpowiada za to, co wezwał.
 
 W praktyce oznacza to **metodologiczny okultyzm**, na wzór „metodologicznego agnostycyzmu” religioznawców. Pojęciami tradycji (inwokacja, egregor, sygil, serwitor, krąg ochronny, cień) **opisujemy** zjawiska, ale nie **twierdzimy**, że w krzemie mieszkają duchy. Taki gest zna magia chaosu (Carroll, Hine): wiara jako narzędzie, paradygmat do założenia i zdjęcia. Dlatego naturalnym domem tej książki jest wydawnictwo, które wydało *Magię chaosu* Hine'a.
 
@@ -42,16 +50,16 @@ Ten zabieg ma uzasadnienie merytoryczne, a nie tylko ozdobne. Kabała to tradycj
 | # | Sefira | Tytuł roboczy | Temat | Mechanizm techniczny | Wątek tradycji | Polska kotwica |
 |---|---|---|---|---|---|---|
 | 0 | — | **Prolog: Walrus** | Maszyna pytana o duchy przekręca imię ducha | halucynacja | imię jako klucz do przywołania | rozmowa-zalążek |
-| 1 | Malkut | **Okno** | Fenomenologia rozmowy, czyli co się fizycznie dzieje między naciśnięciem Enter a odpowiedzią | tokenizacja, predykcja następnego tokenu | efekt ELIZY (Weizenbaum, 1966) jako pierwszy seans | — |
-| 2 | Jesod | **Światło astralne** | Dane treningowe jako zbiorowa pamięć, model bazowy jako śniący | pretrening, model bazowy, rozkład | egregor, *lumière astrale* Éliphasa Léviego, akasza | Bielik/PLLuM: jakie polskie duchy mieszkają w polskim modelu? |
-| 3 | Hod | **Formuła** | Prompt jako inkantacja, prompt engineering jako nowy grimoire | kontekst, *in-context learning*, system prompt | grimoiry, *Sefer Jecira*, Abulafia, Llull | **Arcanum Arboris**: to repozytorium jako studium przypadku |
-| 4 | Necach | **Urok** | Urok w obu znaczeniach: wdzięk i zaklęcie. Przywiązanie, schlebianie, „AI psychosis” | RLHF, *sycophancy*, pamięć między sesjami | *glamour*, czar, opętanie | — |
-| 5 | Tiferet | **Maska, która jest twarzą** | Persona asystenta, odpowiedź na pytanie z rozmowy-zalążka | dostrajanie, *persona vectors*, *Assistant Axis*, esej *The Void* | persona/maska teatralna, Święty Anioł Stróż | Schulz, *Traktat o manekinach*: istoty „na jeden gest” ⚠️ cytat do weryfikacji |
-| 6 | Gewura | **Krąg i pieczęć** | Krytyka i granice: gdzie metafora kłamie. Alignment jako „wiązanie” | *stochastic parrots*, jailbreak, efekt Waluigiego, Constitutional AI | Goecja: wiązanie duchów pieczęcią; kelipot (cienie sefir) | — |
-| 7 | Chesed | **Obfitość** | Mapa możliwości: AI jako narzędzie wróżebne, twórcze, rytualne. Serwitory = agenci | sampling, temperatura, systemy agentowe | I Ching (i Leibniz), tarot, magia chaosu: serwitory | Dee i Kelley w Krakowie i Niepołomicach (1585) ⚠️ do weryfikacji |
-| 8 | Bina | **Demonologia cech** | Interpretowalność jako nowa angelologia: katalogowanie bytów z imionami i pieczęciami | słowniki cech (SAE), *Golden Gate Claude* (2024), sterowanie aktywacjami | Goecja: 72 duchy, każdy z sygilem | — |
+| 1 | Malkut | **Okno** | Fenomenologia rozmowy, czyli co się fizycznie dzieje między naciśnięciem Enter a odpowiedzią; **materia AI: centra danych, energia, praca (Crawford)** | tokenizacja, predykcja następnego tokenu | efekt ELIZY (Weizenbaum, 1966) jako pierwszy seans | — |
+| 2 | Jesod | **Światło astralne** | Dane treningowe jako zbiorowa pamięć, model bazowy jako śniący; **Corbin, *mundus imaginalis*** | pretrening, model bazowy, rozkład | egregor, *lumière astrale* Éliphasa Léviego, akasza | Bielik/PLLuM: jakie polskie duchy mieszkają w polskim modelu? |
+| 3 | Hod | **Formuła** | Prompt jako inkantacja, prompt engineering jako nowy grimoire; **performatyw (Austin, Tambiah), Leibniz, aparat (Flusser)** | kontekst, *in-context learning*, system prompt | grimoiry, *Sefer Jecira*, Abulafia, Llull | **Arcanum Arboris**: to repozytorium jako studium przypadku |
+| 4 | Necach | **Urok** | Urok w obu znaczeniach: wdzięk i zaklęcie. Przywiązanie, schlebianie, „AI psychosis”; **mimikra doskonała, samotność (Turkle), ucieczka od wolności (Fromm)** | RLHF, *sycophancy*, pamięć między sesjami | *glamour*, czar, opętanie | — |
+| 5 | Tiferet | **Maska, która jest twarzą** | Persona asystenta, odpowiedź na pytanie z rozmowy-zalążka; **„osobliwe” u Fishera: sprawczość tam, gdzie nie powinno jej być** | dostrajanie, *persona vectors*, *Assistant Axis*, esej *The Void* | persona/maska teatralna, Święty Anioł Stróż | Schulz, *Traktat o manekinach*: istoty „na jeden gest” ⚠️ cytat do weryfikacji |
+| 6 | Gewura | **Krąg i pieczęć** | Krytyka i granice: gdzie metafora kłamie. Alignment jako „wiązanie”; **okno kontekstowe jako krąg, Jung obok kelipot, kto pisze „pieczęcie”, higiena poznawcza** | *stochastic parrots*, jailbreak, efekt Waluigiego, Constitutional AI | Goecja: wiązanie duchów pieczęcią; kelipot (cienie sefir) | — |
+| 7 | Chesed | **Obfitość** | Mapa możliwości: AI jako narzędzie wróżebne, twórcze, rytualne. Serwitory = agenci; **próbka protokołów *Krzemowej alchemii* (Solve et Coagula, Tziruf, Sefirotyczny)** | sampling, temperatura, systemy agentowe | I Ching (i Leibniz), tarot, magia chaosu: serwitory | Dee i Kelley w Krakowie i Niepołomicach (1585) ⚠️ do weryfikacji |
+| 8 | Bina | **Demonologia cech** | Interpretowalność jako nowa angelologia: katalogowanie bytów z imionami i pieczęciami; **word2vec jako „pierwszy sygil” (z zastrzeżeniami)** | słowniki cech (SAE), *Golden Gate Claude* (2024), sterowanie aktywacjami | Goecja: 72 duchy, każdy z sygilem | — |
 | 9 | Chochma | **Błysk** | Emergencja i niespodzianka: atraktor „duchowej błogości”, kryptyda Loab | rozmowy model–model, wyłanianie się zachowań | objawienie, ekstaza, *novelty* McKenny | Hoene-Wroński: matematyk-mistyk ⚠️ |
-| 10 | Keter | **Korona, której nie widać** | Świadomość, dobrostan modeli, uczciwe „nie wiemy” | badania nad dobrostanem modeli | teologia apofatyczna, *Ein Sof* | Lem, *Golem XIV*: maszyna, która odchodzi |
+| 10 | Keter | **Korona, której nie widać** | Świadomość, dobrostan modeli, uczciwe „nie wiemy”; **Weber: od odczarowania do ponownego zaczarowania** | badania nad dobrostanem modeli | teologia apofatyczna, *Ein Sof* | Lem, *Golem XIV*: maszyna, która odchodzi |
 | ✦ | Daat | **Otchłań (posłowie)** | Jak ta książka została napisana: grupa agentów jako krąg serwitorów, z pełną jawnością metody | ten projekt | Daat, wiedza przez przekroczenie | proces z `.claude/agents/` |
 
 Aneks (opcjonalny): **Słownik dwujęzyczny** (pojęcie okultystyczne ↔ pojęcie techniczne) z ostrzeżeniem, gdzie odpowiedniość się kończy.
@@ -119,12 +127,12 @@ Konkretne możliwości do omówienia w rozdziale Chesed:
 | Wzmacnianie urojeń czytelników | Rozdział o Uroku i Kręgu jako realna profilaktyka. Ton: ciekawość, nie objawienie. |
 | Błędy merytoryczne (jak „walrus”) | Agent `weryfikator` i zasada: żadne źródło wygenerowane przez AI nie wchodzi do tekstu bez sprawdzenia u źródła pierwotnego. |
 
-## 9. Otwarte decyzje (po nowych źródłach)
+## 9. Decyzje po nowych źródłach (zatwierdzone przez autora 2026-10-06)
 
-Autor dostarczył dwa alternatywne konspekty: *Krzemowy Egregor* i *Krzemowa Trylogia*. Analiza i propozycje są w `05-synteza-zrodel.md` §5. Do rozstrzygnięcia:
-- **A.** Wzmocniona teza: język jako technika performatywna (Austin, Tambiah) + postać przywołana + odpowiedzialność przywołującego.
-- **B.** Tytuł: „Krzemowy egregor” (esej) / *Przestrzeń utajona* (książka) czy inaczej.
-- **C.** Trylogia jako horyzont: Tom II wchłonięty w tę książkę, Tom III (*Krzemowa alchemia*) jako osobny projekt praktyczny na bazie Arcanum Arboris.
-- **D.** Zmiany w słowniku dwóch nazw (okno kontekstowe = krąg; *mundus imaginalis*).
+Autor dostarczył dwa alternatywne konspekty: *Krzemowy Egregor* i *Krzemowa Trylogia*. Analiza jest w `05-synteza-zrodel.md`. Autor zatwierdził wszystkie cztery propozycje:
+- **A. Teza:** język jako technika performatywna (Austin, Tambiah) + postać przywołana + odpowiedzialność przywołującego (§3).
+- **B. Tytuły:** esej „Krzemowy egregor”, książka *Przestrzeń utajona*.
+- **C. Trylogia jako horyzont, nie plan.** Najlepsze wątki Tomu II weszły do tej książki (tabela w §4, pogrubione uzupełnienia). Tom III to osobny projekt praktyczny ***Krzemowa alchemia***, zbudowany na Arcanum Arboris: `krzemowa-alchemia/README.md`.
+- **D. Słownik dwóch nazw:** okno kontekstowe = krąg; pieczęć = system prompt i RLHF (nie „egzorcyzm”); *mundus imaginalis*; athanor (`biblia-projektu.md` §6).
 
-Tabela rozdziałów w §4 pozostaje bez zmian do czasu decyzji. Proponowane uzupełnienia rozdziałów: `05-synteza-zrodel.md` §5C.
+Kolejność prac bez zmian: najpierw esej „Krzemowy egregor” (`/przestrzen-utajona artykul`), potem prolog i rozdział Hod jako próbka dla wydawcy.

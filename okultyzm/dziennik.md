@@ -4,6 +4,15 @@ Zapis decyzji i zdarzeń w procesie pisania. Materiał na posłowie **Daat**, cz
 
 ---
 
+## 2026-10-06: Decyzje A–D zatwierdzone
+
+- Autor zatwierdził wszystkie propozycje z `05-synteza-zrodel.md` §5.
+- **A:** nowa teza w `biblia-projektu.md` §1 i `01-koncepcja.md` §3: performatywna moc języka (Austin, Tambiah), postać przywołana, odpowiedzialność przywołującego.
+- **B:** esej „Krzemowy egregor”, książka *Przestrzeń utajona*.
+- **C:** wątki dawnego Tomu II wpisane do tabeli rozdziałów; Tom III wydzielony jako osobny projekt `krzemowa-alchemia/`.
+- **D:** słownik dwóch nazw rozszerzony (krąg = okno kontekstowe, pieczęć, *mundus imaginalis*, athanor); patroni stylu uzupełnieni o Flussera i Fishera.
+- Autor pracuje lokalnie w `C:\Users\Admin\Documents\OKULTYZM\Drzewo-Zycia`.
+
 ## 2026-10-05: Przeniesienie materiałów
 
 - Na prośbę autora katalog `ksiazka/` przemianowano na `okultyzm/`. Definicje agentów i workflow zostają w `.claude/` (tylko tam Claude Code je wczytuje), a ścieżki w nich wskazują teraz `okultyzm/`.
